@@ -1,0 +1,167 @@
+:root {
+  --bg: #0f172a;
+  --card: #111827;
+  --primary: #22c55e;
+  --danger: #ef4444;
+  --text: #e5e7eb;
+  --muted: #9ca3af;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  font-family: 'Inter', sans-serif;
+}
+
+body {
+  background: var(--bg);
+  color: var(--text);
+}
+
+.container {
+  display: grid;
+  grid-template-columns: 240px 1fr;
+  min-height: 100vh;
+}
+
+aside {
+  background: #020617;
+  padding: 24px;
+}
+
+aside nav a {
+  display: block;
+  padding: 12px;
+  color: var(--muted);
+  text-decoration: none;
+  border-radius: 8px;
+}
+
+aside nav a:hover {
+  background: #111827;
+  color: var(--text);
+}
+
+main {
+  padding: 24px;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 16px;
+  margin-bottom: 24px;
+}
+
+.card {
+  background: var(--card);
+  padding: 16px;
+  border-radius: 12px;
+}
+
+.card-view {
+  background: #161b22;
+  border-radius: 12px;
+  padding: 20px;
+  margin-bottom: 24px;
+}
+
+.chart {
+  height: 420px;
+}
+
+.table-wrapper {
+  overflow-x: auto;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  background: var(--card);
+  border-radius: 12px;
+}
+
+th, td {
+  padding: 14px;
+}
+
+th {
+  background: #020617;
+  color: var(--muted);
+}
+
+.positive { color: var(--primary); }
+.negative { color: var(--danger); }
+
+@media (max-width: 768px) {
+  .container {
+    grid-template-columns: 1fr;
+  }
+  aside {
+    display: none;
+  }
+}
+
+.top-header {
+  display: flex;
+  align-items: center;
+  padding: 0px 4px;
+  background: #060605;
+  border-bottom: 1px solid #060605;
+}
+
+
+.top-bar {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  height: 42px;
+  background: #020617;
+  border-bottom: 1px solid #e5e7eb;
+  overflow: hidden;
+}
+
+/* Ticker */
+.ticker {
+  flex: 1;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.ticker-track {
+  display: inline-flex;
+  align-items: center;
+  gap: 32px;
+  padding-left: 100%;
+  animation: ticker 30s linear infinite;
+}
+
+.item {
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.positive {
+  color: #16a34a;
+}
+
+.negative {
+  color: #dc2626;
+}
+
+.muted {
+  color: #6b7280;
+}
+
+/* Animação */
+@keyframes ticker {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+

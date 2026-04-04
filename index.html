@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <title>AG Finance</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- Fonte -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+<!-- TOP BAR -->
+<div class="top-bar">
+
+  <div class="logo">
+    <img src="img/logo.ico" height="50px" />
+  </div>
+  <!-- Ticker -->
+  <div class="ticker">
+    <div class="ticker-track" id="tickerTrack">
+      <span class="item positive">IBOV: 155.830 ▲1,46%</span>
+      <span class="item negative">VALE3: R$ 72,90 ▼0,03%</span>
+      <span class="item positive">ITUB4: R$ 40,26 ▲1,64%</span>
+      <span class="item positive">PETR4: R$ 30,31 ▲0,19%</span>
+      <span class="item positive">B3SA3: R$ 13,53 ▲2,19%</span>
+      <span class="item positive">BTC: R$ 479.328,00 ▲2,19%</span>
+      <span class="item positive">ETH: R$ 15.632,00 ▼3,12%</span>
+      <span class="item muted">USD: R$ 5,53</span>
+      <span class="item muted">EUR: R$ 6,52</span>
+    </div>
+  </div>
+
+</div>
+
+  <div class="container">
+    <!-- Sidebar -->
+    <aside>
+      <h1>AG Finance</h1>
+      <nav>
+        <a href="#">Dashboard</a>
+        <a href="#">Ações</a>
+        <a href="#">Criptomoedas</a>
+        <a href="#">Carteira</a>
+        <a href="noticia/noticia.html">Notícias</a>
+        <a href="#">Comunidade</a>
+        <a href="#">Configurações</a>
+      </nav>
+    </aside>
+
+    <!-- Conteúdo -->
+    <main>
+      <header>
+        <h2>Visão Geral do Mercado</h2>
+        <span>Hoje</span>
+      </header>
+
+      <!-- Cards -->
+      <section class="cards">
+        <div class="card">
+          <span>IBOVESPA</span>
+          <h3 id="ibov">--</h3>
+        </div>
+        <div class="card">
+          <span>Dólar</span>
+          <h3 id="dolar">--</h3>
+        </div>
+        <div class="card">
+          <span>S&P 500</span>
+          <h3 id="sp500">--</h3>
+        </div>
+        <div class="card">
+          <span>NASDAQ</span>
+          <h3 id="nasdaq">--</h3>
+        </div>
+      </section>
+
+      <!-- Card com gráfico -->
+      <section class="card-view">
+        <div class="card-header">
+          <div class="asset-info">
+            <h2>Bitcoin (BTC)</h2>
+            <span>Mercado em tempo real</span>
+          </div>
+        </div>
+
+        <div id="tv_chart" class="chart"></div>
+      </section>
+
+      <!-- Tabela -->
+      <section class="table-wrapper">
+        <table>
+          <thead>
+            <tr>
+              <th>Ativo</th>
+              <th>Preço</th>
+              <th>Variação</th>
+              <th>Volume</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>PETR4</td>
+              <td id="preco-petr4">--</td>
+              <td id="var-petr4">--</td>
+              <td id="vol-petr4">--</td>
+            </tr>
+            <tr>
+              <td>VALE3</td>
+              <td id="preco-vale3">--</td>
+              <td id="var-vale3">--</td>
+              <td id="vol-vale3">--</td>
+            </tr>
+            <tr>
+              <td>ITUB4</td>
+              <td id="preco-itub4">--</td>
+              <td id="var-itub4">--</td>
+              <td id="vol-itub4">--</td>
+            </tr>
+            <tr>
+              <td>B3SA3</td>
+              <td id="preco-b3sa3">--</td>
+              <td id="var-b3sa3">--</td>
+              <td id="vol-b3sa3">--</td>
+            </tr>
+            <tr>
+              <td>BITCOIN</td>
+              <td id="preco-btc">--</td>
+              <td id="var-btc">--</td>
+              <td id="vol-btc">24h</td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+    </main>
+  </div>
+  <section class="rede social">
+    <div class="">
+      
+  </section>
+
+  <!-- TradingView -->
+  <script src="https://s3.tradingview.com/tv.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
